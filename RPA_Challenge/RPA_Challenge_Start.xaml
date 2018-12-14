@@ -1,4 +1,4 @@
-﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="RPA_Challenge_Start" mva:VisualBasic.Settings="{x:Null}"
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="RPA_Challenge_Start" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="RPA_Challenge_Start_1"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
  xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
@@ -53,15 +53,15 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="RPA_Challenge_Start">
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe  RPAチャレンジ'" InformativeScreenshot="c43ce25b2f593f6b19d9be4dbbe365da" Selector="&lt;html title='RPAチャレンジ' /&gt;">
+  <Sequence DisplayName="RPA_Challenge_Start" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe  RPAチャレンジ'" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="c43ce25b2f593f6b19d9be4dbbe365da" Selector="&lt;html title='RPAチャレンジ' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do">
-            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 開始" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <ui:Click ClickType="CLICK_SINGLE" DelayBefore="0" DelayMS="0" DisplayName="Click 開始" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -73,20 +73,15 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="979414c7e0ec9a8ecb641adc87be85e9" Selector="&lt;webctrl id='start' tag='BUTTON' /&gt;" WaitForReady="INTERACTIVE" />
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="979414c7e0ec9a8ecb641adc87be85e9" Selector="&lt;webctrl id='start' tag='BUTTON' /&gt;" WaitForReady="NONE" />
               </ui:Click.Target>
-              <sap2010:WorkflowViewState.IdRef>Click_1</sap2010:WorkflowViewState.IdRef>
             </ui:Click>
-            <sap2010:WorkflowViewState.IdRef>Sequence_1</sap2010:WorkflowViewState.IdRef>
           </Sequence>
         </ActivityAction>
       </ui:BrowserScope.Body>
-      <sap2010:WorkflowViewState.IdRef>BrowserScope_1</sap2010:WorkflowViewState.IdRef>
     </ui:BrowserScope>
-    <sap2010:WorkflowViewState.IdRef>Sequence_2</sap2010:WorkflowViewState.IdRef>
-    <sads:DebugSymbol.Symbol>d2FDOlxVc2Vyc1xtaXlhaWNoaS55b3NoaWhpa29cRG9jdW1lbnRzXFVpUGF0aFxSUEFDaGFsbGVuZ2UxXFJQQV9DaGFsbGVuZ2VcUlBBX0NoYWxsZW5nZV9TdGFydC54YW1sBjgDWA4CAQE5BVUXAgECOfMBOZQCAgEGPwtRFgIBA0ANTxgCAQRMoAFMywECAQU=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d2FDOlxVc2Vyc1xZb3NoaWhpa28gTWl5YWljaGlcRG9jdW1lbnRzXFVpUGF0aFxSUEFfQ2hhbGxlbmdlXFJQQV9DaGFsbGVuZ2VcUlBBX0NoYWxsZW5nZV9TdGFydC54YW1sCDgDVA4CAQE5BVIXAgECOaQCOcUCAgEIPwtPFgIBA0ANThgCAQRMoAFMywECAQdASEBLAgEGQDxAPwIBBQ==</sads:DebugSymbol.Symbol>
   </Sequence>
-  <sap2010:WorkflowViewState.IdRef>RPA_Challenge_Start_1</sap2010:WorkflowViewState.IdRef>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
       <sap2010:ViewStateData Id="Click_1" sap:VirtualizedContainerService.HintSize="314,106" />
@@ -105,7 +100,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="RPA_Challenge_Start_1" sap:VirtualizedContainerService.HintSize="476,620" />
+      <sap2010:ViewStateData Id="RPA_Challenge_Start_1" sap:VirtualizedContainerService.HintSize="476,580" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
