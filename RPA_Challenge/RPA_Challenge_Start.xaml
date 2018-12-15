@@ -61,7 +61,7 @@
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
           <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_1">
-            <ui:Click ClickType="CLICK_SINGLE" DelayBefore="0" DelayMS="0" DisplayName="Click 開始" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click ClickType="CLICK_SINGLE" DelayBefore="0" DelayMS="0" DisplayName="Click 開始" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -80,7 +80,7 @@
         </ActivityAction>
       </ui:BrowserScope.Body>
     </ui:BrowserScope>
-    <sads:DebugSymbol.Symbol>d2FDOlxVc2Vyc1xZb3NoaWhpa28gTWl5YWljaGlcRG9jdW1lbnRzXFVpUGF0aFxSUEFfQ2hhbGxlbmdlXFJQQV9DaGFsbGVuZ2VcUlBBX0NoYWxsZW5nZV9TdGFydC54YW1sCDgDVA4CAQE5BVIXAgECOaQCOcUCAgEIPwtPFgIBA0ANThgCAQRMoAFMywECAQdASEBLAgEGQDxAPwIBBQ==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d1hDOlxVc2Vyc1xZb3NoaWhpa28gTWl5YWljaGlcRGVza3RvcFxSUEFfQ2hhbGxlbmdlXFJQQV9DaGFsbGVuZ2VcUlBBX0NoYWxsZW5nZV9TdGFydC54YW1sCDgDVA4CAQE5BVIXAgECOaQCOcUCAgEIPwtPFgIBA0ANThgCAQRMoAFMywECAQdASEBLAgEGQDxAPwIBBQ==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>

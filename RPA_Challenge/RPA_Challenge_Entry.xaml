@@ -91,7 +91,7 @@
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html title='RPAチャレンジ' /&gt;&lt;webctrl aaname='苗字' parentid='randomForm' tag='DIV' /&gt;" WaitForReady="NONE" />
                 </ui:FindChildren.Target>
               </ui:FindChildren>
-              <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="0" DelayMS="0" DisplayName="Type Into" EmptyField="True" sap2010:WorkflowViewState.IdRef="TypeInto_10" SendWindowMessages="False" SimulateType="True" Text="[in_LastName]">
+              <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="0" DelayMS="0" DisplayName="Type Into" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_10" SendWindowMessages="False" SimulateType="True" Text="[in_LastName]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Element="[Elements(0)]" WaitForReady="NONE" />
                 </ui:TypeInto.Target>
@@ -103,7 +103,7 @@
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html title='RPAチャレンジ' /&gt;&lt;webctrl aaname='名前' parentid='randomForm' tag='DIV' /&gt;" WaitForReady="NONE" />
                 </ui:FindChildren.Target>
               </ui:FindChildren>
-              <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="0" DelayMS="0" DisplayName="Type Into" EmptyField="True" sap2010:WorkflowViewState.IdRef="TypeInto_9" SendWindowMessages="False" SimulateType="True" Text="[in_FirstName]">
+              <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="0" DelayMS="0" DisplayName="Type Into" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_9" SendWindowMessages="False" SimulateType="True" Text="[in_FirstName]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Element="[Elements(0)]" WaitForReady="NONE" />
                 </ui:TypeInto.Target>
@@ -115,7 +115,7 @@
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html title='RPAチャレンジ' /&gt;&lt;webctrl aaname='会社名' parentid='randomForm' tag='DIV' /&gt;" WaitForReady="NONE" />
                 </ui:FindChildren.Target>
               </ui:FindChildren>
-              <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="0" DelayMS="0" DisplayName="Type Into" EmptyField="True" sap2010:WorkflowViewState.IdRef="TypeInto_11" SendWindowMessages="False" SimulateType="True" Text="[in_CompanyName]">
+              <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="0" DelayMS="0" DisplayName="Type Into" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_11" SendWindowMessages="False" SimulateType="True" Text="[in_CompanyName]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Element="[Elements(0)]" WaitForReady="NONE" />
                 </ui:TypeInto.Target>
@@ -127,7 +127,7 @@
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html title='RPAチャレンジ' /&gt;&lt;webctrl aaname='部署' parentid='randomForm' tag='DIV' /&gt;" WaitForReady="NONE" />
                 </ui:FindChildren.Target>
               </ui:FindChildren>
-              <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="0" DelayMS="0" DisplayName="Type Into" EmptyField="True" sap2010:WorkflowViewState.IdRef="TypeInto_12" SendWindowMessages="False" SimulateType="True" Text="[in_Depertment]">
+              <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="0" DelayMS="0" DisplayName="Type Into" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_12" SendWindowMessages="False" SimulateType="True" Text="[in_Depertment]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Element="[Elements(0)]" WaitForReady="NONE" />
                 </ui:TypeInto.Target>
@@ -139,7 +139,7 @@
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html title='RPAチャレンジ' /&gt;&lt;webctrl aaname='住所' parentid='randomForm' tag='DIV' /&gt;" WaitForReady="NONE" />
                 </ui:FindChildren.Target>
               </ui:FindChildren>
-              <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="0" DelayMS="0" DisplayName="Type Into" EmptyField="True" sap2010:WorkflowViewState.IdRef="TypeInto_13" SendWindowMessages="False" SimulateType="True" Text="[in_Address]">
+              <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="0" DelayMS="0" DisplayName="Type Into" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_13" SendWindowMessages="False" SimulateType="True" Text="[in_Address]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Element="[Elements(0)]" WaitForReady="NONE" />
                 </ui:TypeInto.Target>
@@ -151,7 +151,7 @@
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html title='RPAチャレンジ' /&gt;&lt;webctrl aaname='メールアドレス' parentid='randomForm' tag='DIV' /&gt;" WaitForReady="NONE" />
                 </ui:FindChildren.Target>
               </ui:FindChildren>
-              <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="0" DelayMS="0" DisplayName="Type Into" EmptyField="True" sap2010:WorkflowViewState.IdRef="TypeInto_14" SendWindowMessages="False" SimulateType="True" Text="[in_Email]">
+              <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="0" DelayMS="0" DisplayName="Type Into" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_14" SendWindowMessages="False" SimulateType="True" Text="[in_Email]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Element="[Elements(0)]" WaitForReady="NONE" />
                 </ui:TypeInto.Target>
@@ -163,13 +163,13 @@
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html title='RPAチャレンジ' /&gt;&lt;webctrl aaname='電話番号' parentid='randomForm' tag='DIV' /&gt;" WaitForReady="NONE" />
                 </ui:FindChildren.Target>
               </ui:FindChildren>
-              <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="0" DelayMS="0" DisplayName="Type Into" EmptyField="True" sap2010:WorkflowViewState.IdRef="TypeInto_15" SendWindowMessages="False" SimulateType="True" Text="[in_PhoneNumber]">
+              <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="0" DelayMS="0" DisplayName="Type Into" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_15" SendWindowMessages="False" SimulateType="True" Text="[in_PhoneNumber]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Element="[Elements(0)]" WaitForReady="NONE" />
                 </ui:TypeInto.Target>
               </ui:TypeInto>
             </Sequence>
-            <ui:Click ClickType="CLICK_SINGLE" DelayBefore="10" DelayMS="0" DisplayName="Click 登録" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click ClickType="CLICK_SINGLE" DelayBefore="0" DelayMS="0" DisplayName="Click 登録" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -188,7 +188,7 @@
         </ActivityAction>
       </ui:BrowserScope.Body>
     </ui:BrowserScope>
-    <sads:DebugSymbol.Symbol>d2FDOlxVc2Vyc1xZb3NoaWhpa28gTWl5YWljaGlcRG9jdW1lbnRzXFVpUGF0aFxSUEFfQ2hhbGxlbmdlXFJQQV9DaGFsbGVuZ2VcUlBBX0NoYWxsZW5nZV9FbnRyeS54YW1sUAFxAX0BAwGmAQGxAQECTQPAAQ4CAQFRBb4BFwIBAlGUAlG1AgIBVVcLuwEWAgEDWA1jGAIBSmQNbxgCAT9wDXsYAgE0fA2HARgCASmIAQ2TARgCAR6UAQ2fARgCAROgAQ2rARgCAQisAQ26ARgCAQRZD10hAgFRXg9iHQIBS2UPaSECAUZqD24dAgFAcQ91IQIBO3YPeh0CATV9D4EBIQIBMIIBD4YBHQIBKokBD40BIQIBJY4BD5IBHQIBH5UBD5kBIQIBGpoBD54BHQIBFKEBD6UBIQIBD6YBD6oBHQIBCbgBoAG4Ac0BAgEHrAFJrAFMAgEGrAE8rAFAAgEFW2lbxwECAVRZXFl7AgFTWSlZNQIBUl56Xn0CAVBeigJemQICAU5gaWB4AgFNXm5ecQIBTGdpZ8cBAgFJZVxlewIBSGUpZTUCAUdqemp9AgFFaokCapkCAgFDbGlseAIBQmpuanECAUFzaXPIAQIBPnFdcXwCAT1xKXE1AgE8dnp2fQIBOnaKAnacAgIBOHhpeHgCATd2bnZxAgE2f2l/xwECATN9XH17AgEyfSl9NQIBMYIBeoIBfQIBL4IBigKCAZsCAgEthAFphAF4AgEsggFuggFxAgEriwFpiwHHAQIBKIkBXIkBewIBJ4kBKYkBNQIBJo4Beo4BfQIBJI4BigKOAZgCAgEikAFpkAF4AgEhjgFujgFxAgEglwFplwHMAQIBHZUBYZUBgAECARyVASmVATUCARuaAXqaAX0CARmaAYoCmgGWAgIBF5wBaZwBeAIBFpoBbpoBcQIBFaMBaaMByQECARKhAV6hAX0CARGhASmhATUCARCmAXqmAX0CAQ6mAYoCpgGcAgIBDKgBaagBeAIBC6YBbqYBcQIBCg==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d1hDOlxVc2Vyc1xZb3NoaWhpa28gTWl5YWljaGlcRGVza3RvcFxSUEFfQ2hhbGxlbmdlXFJQQV9DaGFsbGVuZ2VcUlBBX0NoYWxsZW5nZV9FbnRyeS54YW1sUAFxAX0BAwGmAQGxAQECTQPAAQ4CAQFRBb4BFwIBAlGUAlG1AgIBVVcLuwEWAgEDWA1jGAIBSmQNbxgCAT9wDXsYAgE0fA2HARgCASmIAQ2TARgCAR6UAQ2fARgCAROgAQ2rARgCAQisAQ26ARgCAQRZD10hAgFRXg9iHQIBS2UPaSECAUZqD24dAgFAcQ91IQIBO3YPeh0CATV9D4EBIQIBMIIBD4YBHQIBKokBD40BIQIBJY4BD5IBHQIBH5UBD5kBIQIBGpoBD54BHQIBFKEBD6UBIQIBD6YBD6oBHQIBCbgBoAG4Ac0BAgEHrAFIrAFLAgEGrAE8rAE/AgEFW2lbxwECAVRZXFl7AgFTWSlZNQIBUl56Xn0CAVBeiwJemgICAU5gaWB4AgFNXm5ecQIBTGdpZ8cBAgFJZVxlewIBSGUpZTUCAUdqemp9AgFFaooCapoCAgFDbGlseAIBQmpuanECAUFzaXPIAQIBPnFdcXwCAT1xKXE1AgE8dnp2fQIBOnaLAnadAgIBOHhpeHgCATd2bnZxAgE2f2l/xwECATN9XH17AgEyfSl9NQIBMYIBeoIBfQIBL4IBiwKCAZwCAgEthAFphAF4AgEsggFuggFxAgEriwFpiwHHAQIBKIkBXIkBewIBJ4kBKYkBNQIBJo4Beo4BfQIBJI4BiwKOAZkCAgEikAFpkAF4AgEhjgFujgFxAgEglwFplwHMAQIBHZUBYZUBgAECARyVASmVATUCARuaAXqaAX0CARmaAYsCmgGXAgIBF5wBaZwBeAIBFpoBbpoBcQIBFaMBaaMByQECARKhAV6hAX0CARGhASmhATUCARCmAXqmAX0CAQ6mAYsCpgGdAgIBDKgBaagBeAIBC6YBbqYBcQIBCg==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -277,7 +277,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="BrowserScope_1" sap:VirtualizedContainerService.HintSize="414,1242">
+      <sap2010:ViewStateData Id="BrowserScope_1" sap:VirtualizedContainerService.HintSize="414,966">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -285,7 +285,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="436,1132">
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="436,1134">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -293,7 +293,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="RPA_Challenge_Entry_1" sap:VirtualizedContainerService.HintSize="476,1249" />
+      <sap2010:ViewStateData Id="RPA_Challenge_Entry_1" sap:VirtualizedContainerService.HintSize="476,1214" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

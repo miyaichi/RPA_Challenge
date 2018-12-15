@@ -8,7 +8,6 @@
  xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
  xmlns:sd="clr-namespace:System.Data;assembly=System.Data"
- xmlns:ui="http://schemas.uipath.com/workflow/activities"
  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_TransactionNumber" Type="InArgument(x:Int32)" />
@@ -73,61 +72,31 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Description: Get data from spreadsheets, databases, email, web API or UiPath server queues. If no new data, set out_TransactionItem to Nothing. &#xA;&#xA;For a linear process (not repetitive), set out_TransactionItem only for in_TransactionNumber 1 - first and only transaction. &#xA;&#xA;If the process is repeatable, set io_TransactionData once for in_TransactionNumber 1, then assign a new out_TransactionItem by using the in_TransactionNumber to index io_TransactionData. Be aware that, at the end of the io_TransactionData collection, it is your responsibility to set out_TransactionItem to Nothing, thus ending the process." DisplayName="GetTransactionData" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <If Condition="[in_TransactionNumber = 1]" DisplayName="If first Transaction, Read all the data">
+    <If Condition="[in_TransactionNumber &lt;= io_TransactionData.Rows.Count]" DisplayName="Next Transaction, get Data" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Excel application scope" Visible="False" WorkbookPath="[in_Config(&quot;Data_Path&quot;).ToString]">
-          <ui:ExcelApplicationScope.Body>
-            <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-              <ActivityAction.Argument>
-                <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-              </ActivityAction.Argument>
-              <Sequence DisplayName="Do">
-                <ui:ExcelReadRange AddHeaders="True" DataTable="[io_TransactionData]" DisplayName="Read Range" SheetName="Sheet1">
-                  <ui:ExcelReadRange.Range>
-                    <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String" Value="" />
-                    </InArgument>
-                  </ui:ExcelReadRange.Range>
-                  <sap2010:WorkflowViewState.IdRef>ExcelReadRange_1</sap2010:WorkflowViewState.IdRef>
-                </ui:ExcelReadRange>
-                <sap2010:WorkflowViewState.IdRef>Sequence_3</sap2010:WorkflowViewState.IdRef>
-              </Sequence>
-            </ActivityAction>
-          </ui:ExcelApplicationScope.Body>
-          <sap2010:WorkflowViewState.IdRef>ExcelApplicationScope_1</sap2010:WorkflowViewState.IdRef>
-        </ui:ExcelApplicationScope>
-      </If.Then>
-      <sap2010:WorkflowViewState.IdRef>If_2</sap2010:WorkflowViewState.IdRef>
-    </If>
-    <If Condition="[in_TransactionNumber &lt;= io_TransactionData.Rows.Count]" DisplayName="Next Transaction, get Data">
-      <If.Then>
-        <Assign>
+        <Assign sap2010:WorkflowViewState.IdRef="Assign_5">
           <Assign.To>
             <OutArgument x:TypeArguments="sd:DataRow">[out_TransactionItem]</OutArgument>
           </Assign.To>
           <Assign.Value>
             <InArgument x:TypeArguments="sd:DataRow">[io_TransactionData.Rows(in_TransactionNumber - 1)]</InArgument>
           </Assign.Value>
-          <sap2010:WorkflowViewState.IdRef>Assign_5</sap2010:WorkflowViewState.IdRef>
         </Assign>
       </If.Then>
       <If.Else>
-        <Assign>
+        <Assign sap2010:WorkflowViewState.IdRef="Assign_6">
           <Assign.To>
             <OutArgument x:TypeArguments="sd:DataRow">[out_TransactionItem]</OutArgument>
           </Assign.To>
           <Assign.Value>
             <InArgument x:TypeArguments="sd:DataRow">[Nothing]</InArgument>
           </Assign.Value>
-          <sap2010:WorkflowViewState.IdRef>Assign_6</sap2010:WorkflowViewState.IdRef>
         </Assign>
       </If.Else>
-      <sap2010:WorkflowViewState.IdRef>If_3</sap2010:WorkflowViewState.IdRef>
     </If>
     <If Condition="[out_TransactionItem isNot Nothing]" DisplayName="If a new Item is fetched Grab it's significant data for logging" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
@@ -159,30 +128,13 @@
         </Sequence>
       </If.Then>
     </If>
-    <sads:DebugSymbol.Symbol>d1xDOlxVc2Vyc1xtaXlhaWNoaS55b3NoaWhpa29cRG9jdW1lbnRzXFVpUGF0aFxSUEFfQ2hhbGxlbmdlXEZyYW1ld29ya1xHZXRUcmFuc2FjdGlvbkRhdGEueGFtbB5QA6MBDgIBAVEFagoCARtrBYMBCgIBEYQBBaEBCgIBAlETUS8CARxTCWckAgEeaxNrTwIBEm0JdRICARd4CYABEgIBE4QBE4QBOAIBA4YBCZ8BFAIBBFOhAVPOAQIBJVkPYxoCAR9yNnJpAgEabzdvTAIBGH02fT8CARZ6N3pMAgEUhwELjgEUAgENjwELlgEUAgEJlwELngEUAgEFWhFhJQIBIIwBNowBRAIBEIkBN4kBSgIBDpQBNpQBRAIBDJEBN5EBTgIBCpwBNpwBRAIBCJkBN5kBTgIBBlpAWlYCASNdF11GAgEiWnpaggECASE=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d1NDOlxVc2Vyc1xZb3NoaWhpa28gTWl5YWljaGlcRGVza3RvcFxSUEFfQ2hhbGxlbmdlXEZyYW1ld29ya1xHZXRUcmFuc2FjdGlvbkRhdGEueGFtbBVOA4QBDgIBAU8FZAoCARFlBYIBCgIBAk8TT08CARJRCVgSAgEXWwliEgIBE2UTZTgCAQNnCYABFAIBBFY2VmkCARpTN1NMAgEYYDZgPwIBFl03XUwCARRoC28UAgENcAt3FAIBCXgLfxQCAQVtNm1EAgEQajdqSgIBDnU2dUQCAQxyN3JOAgEKfTZ9RAIBCHo3ek4CAQY=</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
-      <sap2010:ViewStateData Id="ExcelReadRange_1" sap:VirtualizedContainerService.HintSize="314,59" />
-      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="336,183">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ExcelApplicationScope_1" sap:VirtualizedContainerService.HintSize="414,292" />
-      <sap2010:ViewStateData Id="If_2" sap:VirtualizedContainerService.HintSize="539,440">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="242,60" />
       <sap2010:ViewStateData Id="Assign_6" sap:VirtualizedContainerService.HintSize="242,60" />
-      <sap2010:ViewStateData Id="If_3" sap:VirtualizedContainerService.HintSize="539,208">
+      <sap2010:ViewStateData Id="If_3" sap:VirtualizedContainerService.HintSize="509,210">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -201,7 +153,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="539,574">
+      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="509,576">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -209,7 +161,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="561,1588">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="531,1122">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -217,7 +169,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="GetTransactionData_1" sap:VirtualizedContainerService.HintSize="601,1668" />
+      <sap2010:ViewStateData Id="GetTransactionData_1" sap:VirtualizedContainerService.HintSize="571,1202" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
